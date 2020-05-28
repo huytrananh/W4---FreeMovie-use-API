@@ -1,9 +1,10 @@
 import React,{useEffect,useState} from 'react'
 import './App.css'
-import MovieList from './components/MovieList'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import {Navbar, Carousel, Button,Card, CardDeck} from 'react-bootstrap'
+import {Carousel, Button ,Card , CardDeck} from 'react-bootstrap'
 import Footer from './components/Footer'
+import Navbar from './components/Navbar'
+import MovieList from './components/MovieList'
 
 
 
@@ -39,44 +40,34 @@ function App() {
   }
   return (
     <div>
-      <Navbar></Navbar>
+      <Navbar/>
       <div className="carousel">
         <Carousel>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="holder.js/800x400?text=First slide&bg=373940"
-              alt="First slide"
-            />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="holder.js/800x400?text=Second slide&bg=282c34"
-              alt="Third slide"
-            />
+          {/* <div className="container"> */}
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="https://i.pinimg.com/originals/ab/3e/c7/ab3ec74385f07d893656cb049ea95069.jpg"
+                alt="First slide"
+              />
+              <Carousel.Caption>
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src="https://hdwallsource.com/img/2018/8/4k-mortal-engines-movie-wallpaper-66138-68390-hd-wallpapers.jpg"
+                alt="Third slide"
+              />
 
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="holder.js/800x400?text=Third slide&bg=20232a"
-              alt="Third slide"
-            />
-
-            <Carousel.Caption>
-              <h3>Third slide label</h3>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-            </Carousel.Caption>
-          </Carousel.Item>
+              <Carousel.Caption>
+                <h3>Second slide label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          {/* </div> */}
         </Carousel>
       </div>
       <div className="switch-movie-section">

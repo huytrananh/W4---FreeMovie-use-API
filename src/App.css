@@ -37,9 +37,46 @@
   }
 }
 
+
+/* ------------------- NAVBAR------------------- */
+.navbar-left{
+  /* font-size: 20pt !important;
+  font-weight: bold; */
+  padding-left: 20px;
+}
+.navbar-right{
+  justify-content: flex-end;
+}
+
+.navbar-nav .nav-link{
+  padding-left: 20px !important;
+  padding-right: 30px !important;
+}
+
+.logo-text{
+  font-family: "Josefin Sans",sans-serif !important;
+  padding-right: 5px;
+  font-weight: bold;
+  
+}
+
+/* ------------------- END NAVBAR------------------- */
+
+
+
+
+
+
+
 .movie-list{
   display: flex;
 }
+
+
+
+
+
+
 /* ------------------- FOOTER------------------- */
 .site-footer
 {
