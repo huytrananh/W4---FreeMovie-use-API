@@ -37,20 +37,25 @@
   }
 }
 
+.film-body{
+  padding-left: 100px;
+  padding-right: 100px;
+  font-family: "Josefin Sans",sans-serif;
+}
 
 /* ------------------- NAVBAR------------------- */
-.navbar-left{
-  /* font-size: 20pt !important;
-  font-weight: bold; */
-  padding-left: 20px;
+.navbar{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
+
 .navbar-right{
   justify-content: flex-end;
 }
 
 .navbar-nav .nav-link{
   padding-left: 20px !important;
-  padding-right: 30px !important;
+  padding-right: 0px !important;
 }
 
 .logo-text{
@@ -62,14 +67,66 @@
 
 /* ------------------- END NAVBAR------------------- */
 
+/* ------------------- Switch Movie Section ------------------- */
+.switch-movie-section{
+  margin-top: 50px
+}
+.search{
+  display: flex;
+  justify-content: space-between;
+}
 
+.input-group{
+  width: 300px !important;
+}
+
+.btn-search{
+  color: #495057 !important;
+  border: 1px solid #ced4da !important ;
+}
+.btn-search:hover{
+  background-color: #495057 !important;
+  color: white !important
+}
+
+.date-text {
+  font-size: 11pt;
+  color: #818a91
+}
+/* ------------------- END Switch Movie Section ------------------- */
+/* ------------------- Trailer Section ------------------- */
+.trailer-section{
+  margin-top: 50px
+}
+/* ------------------- END Trailer Section ------------------- */
+
+
+.btn{
+  border-radius: 0px !important;
+  
+}
 .btn-primary {
-  margin: 10px 
+  background-color: white !important;
+  color: black !important;
+  border: none !important;
+
+}
+.btn-primary:hover{
+  /* background-color: rgb(165, 165, 165) !important; */
+  border-bottom: 1px solid black !important;
+  
+}
+
+.left .btn-primary{
+  margin-right: 20px;
 }
 
 .top{
   display: flex;
   justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 0px;
 }
 
 .card-body{
@@ -80,14 +137,14 @@
 .movie-list{
   display: flex;
   flex-wrap: wrap;
-  margin: 10px;
-  justify-content: space-evenly;
+  /* margin: 10px; */
+  justify-content: space-between;
 }
 
 
 .card{
-  margin-left: 100px !important;
-  margin-right: 100px !important;
+  /* margin-left: 100px !important;
+  margin-right: 100px !important; */
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -95,13 +152,17 @@
 .card:hover{
   transform: scale(1.1);
   transition: all ease 500ms;
+
 }
 
 
 
 
-
 /* ------------------- FOOTER------------------- */
+footer{
+  margin-top: 50px;
+  background-image: url(https://cdn.wallpapername.com/1920x1080/20121212/horror%201920x1080%20wallpaper_www.wallpapername.com_99.jpg);
+}
 .site-footer
 {
   background-color:#26272b;
@@ -133,7 +194,7 @@
 }
 .site-footer a:hover
 {
-  color:#3366cc;
+  color:white;
   text-decoration:none;
 }
 .footer-links
@@ -147,11 +208,11 @@
 }
 .footer-links a
 {
-  color:#737373
+  color:#b3b3b3
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
-  color:#3366cc;
+  color:white;
   text-decoration:none;
 }
 .footer-links.inline li
