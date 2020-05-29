@@ -63,15 +63,39 @@
 /* ------------------- END NAVBAR------------------- */
 
 
+.btn-primary {
+  margin: 10px 
+}
 
+.top{
+  display: flex;
+  justify-content: space-between;
+}
 
-
-
+.card-body{
+  max-height: 200px;
+  overflow-y: scroll;
+}
 
 .movie-list{
   display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+  justify-content: space-evenly;
 }
 
+
+.card{
+  margin-left: 100px !important;
+  margin-right: 100px !important;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.card:hover{
+  transform: scale(1.1);
+  transition: all ease 500ms;
+}
 
 
 
