@@ -68,12 +68,16 @@
   font-weight: bold;
   
 }
-
 /* ------------------- END NAVBAR------------------- */
 
 /* ------------------- Switch Movie Section ------------------- */
 .switch-movie-section{
   margin-top: 50px
+}
+
+.top-section{
+  display: flex;
+  justify-content: space-between;
 }
 .search{
   display: flex;

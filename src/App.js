@@ -85,7 +85,7 @@ function App() {
           
         </Carousel>
         <div className="switch-movie-section">
-          <nav class="navbar navbar-light justify-content-between">
+          <nav class=" navbar-light justify-content-between top-section">
             <h1>Now Playing Films</h1>
             <form class="form-inline">
               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
@@ -101,11 +101,13 @@ function App() {
               </div>
               
               <div className="right">
+                <Button className="btn" onClick={() => getMovieList(typeOfMovie,1)}>Previous</Button>
                 <Button className="btn" onClick={() => getMovieList(typeOfMovie,1)}>1</Button>
                 <Button className="btn" onClick={() => getMovieList(typeOfMovie,2)}>2</Button>
                 <Button className="btn" onClick={() => getMovieList(typeOfMovie,3)}>3</Button>
                 <Button className="btn" onClick={() => getMovieList(typeOfMovie,4)}>4</Button>
                 <Button className="btn" onClick={() => getMovieList(typeOfMovie,5)}>5</Button>
+                <Button className="btn" onClick={() => getMovieList(typeOfMovie,1)}>Next</Button>
               </div>
             </div>
             <hr/>
