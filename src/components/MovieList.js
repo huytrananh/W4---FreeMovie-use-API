@@ -3,15 +3,15 @@ import MovieCard from './MovieCard'
 
 
 export default function MovieList(props) {
-    if(props.list === null){
+    if(props.movieList === null){
         return(<div>Loading</div>)
     }
     return (
         <div className="movie-list">
-            {props.list.map(item => {
+            {props.movieList.map(item => {
                 return(
                     <>
-                        <MovieCard movie = {item}/>
+                        <MovieCard movie = {item} genresFromMovieList = {props.genresFromApp}/>
                     </>
                 )
             })}

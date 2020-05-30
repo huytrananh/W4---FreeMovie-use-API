@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import {Carousel, Button ,Card , CardDeck} from 'react-bootstrap'
+import {Carousel, Button} from 'react-bootstrap'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import MovieList from './components/MovieList'
@@ -15,6 +15,8 @@ function App() {
   //3. define state
   let [movieList, setMovieList] = useState([])
   let [typeOfMovie,setType] = useState("now_playing")
+  let [genreList, setGenreList] = useState([])
+  let [originalList, setOriginalList] = useState([])
 
   // 1. get API Now Playing from themoviedb
   const getMovieList = async(listName, num) => {
@@ -24,13 +26,46 @@ function App() {
     //3.1
     setMovieList(result.results) // result + results ?????
     setType(listName)
+    setOriginalList(result.results)
     console.log("MOVIE: ", result)
   }
 
+  // Get API Genre from themoviedb
+  const getGenreList = async() => {
+    let url = `https://api.themoviedb.org/3/genre/movie/list?api_key=${apiKey}&language=en-US`
+    let data = await fetch(url)
+    let result = await data.json()
+    getMovieList("now_playing")
+    setGenreList(result.genres)
+    console.log("My genre is: ", result)
+  }
+
+  let keyWord = ''
+  const searchByKeyWord = (e) => {
+    e.preventDefault()
+    console.log("Hehehe", keyWord)
+    searchTheKeyword(keyWord)
+  }
+  const searchTheKeyword = (keyWord) => {
+    console.log("This from App: ", keyWord)
+    if(keyWord === ''){
+      setMovieList(originalList)
+      return
+    }
+    //1. grab the movie list
+    //2. grab each item from list
+    //3. check its include that keyword
+    //4. if that include that save into another array
+    //5. set that array into state so user can see
+    let filteredList = movieList.filter(movie => movie.title.toLowerCase().includes(keyWord.toLowerCase()))
+    setMovieList(filteredList)
+    
+  }
+  
   // useEffect(function you wanna fire , when you call the useEffect again )
-  useEffect(() => { getMovieList("now_playing") }, [])
+  useEffect(() => { getGenreList() }, [])
   // 5.
-  if(movieList == null){
+  if(movieList === null && genreList === null){
     return(<div>Loading</div>)
   }
   return (
@@ -86,15 +121,16 @@ function App() {
         </Carousel>
         <div className="switch-movie-section">
           <nav class=" navbar-light justify-content-between top-section">
-            <h1>Now Playing Films</h1>
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+            <h1>Movie Online</h1>
+            <form class="form-inline" onSubmit={ (e) => searchByKeyWord(e)}>
+              <input class="form-control mr-sm-2" onChange={(e) => keyWord = e.target.value}type="search" placeholder="Search" aria-label="Search"/>
               <button class="btn btn-outline-success my-2 my-sm-0 btn-search" type="submit">Search</button>
             </form>
           </nav>
             <hr/>
             <div className="top">
               <div className="left">
+              <Button className="btn" onClick={() => getMovieList("now_playing")}>Now Playing</Button> 
                 <Button className="btn" onClick={() => getMovieList("top_rated")}>Top Rated</Button>
                 <Button className="btn" onClick={() => getMovieList("popular")}>Popular</Button>
                 <Button className="btn" onClick={() => getMovieList("upcoming")}>Upcoming</Button> 
@@ -112,7 +148,7 @@ function App() {
             </div>
             <hr/>
             <div>
-              <MovieList list = {movieList}/>
+              <MovieList movieList = {movieList} genresFromApp={genreList}/>
             </div>
         </div>    
         <div className="trailer-section">

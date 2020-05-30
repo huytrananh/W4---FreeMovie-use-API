@@ -70,6 +70,7 @@
 }
 /* ------------------- END NAVBAR------------------- */
 
+
 /* ------------------- Switch Movie Section ------------------- */
 .switch-movie-section{
   margin-top: 50px
@@ -101,18 +102,10 @@
   font-size: 11pt;
   color: #818a91
 }
-/* ------------------- END Switch Movie Section ------------------- */
-/* ------------------- Trailer Section ------------------- */
-.trailer-section{
-  margin-top: 50px;
-}
-.trailer-section .trailer-top{
-  display: block;
-  border: none;
-  margin-bottom: 20px;
-}
-/* ------------------- END Trailer Section ------------------- */
 
+.genre-list{
+  margin-right: 10px;
+}
 
 .btn{
   border-radius: 0px !important;
@@ -167,8 +160,19 @@
   transition: all ease 500ms;
 
 }
+/* ------------------- END Switch Movie Section ------------------- */
 
 
+/* ------------------- Trailer Section ------------------- */
+.trailer-section{
+  margin-top: 50px;
+}
+.trailer-section .trailer-top{
+  display: block;
+  border: none;
+  margin-bottom: 20px;
+}
+/* ------------------- END Trailer Section ------------------- */
 
 
 /* ------------------- FOOTER------------------- */
