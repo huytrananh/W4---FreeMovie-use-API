@@ -4,7 +4,7 @@ import {Card, ListGroupItem, ListGroup, CardDeck} from 'react-bootstrap'
 export default function MovieCard(props) {
     let movie = props.movie
     return (
-        <CardDeck>
+        <CardDeck className="movie-list-card">
             <Card style={{ width: '18rem'}}>
                     <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}`} />
                     <Card.Body>
