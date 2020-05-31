@@ -101,20 +101,20 @@ function App() {
             <hr/>
             <div className="top">
               <div className="left">
-                <Button className="btn" variant={typeOfMovie === "now_playing" ? "secondary" : ""} onClick={() => getMovieList("now_playing",1)}>Now Playing</Button> 
-                <Button className="btn" variant={typeOfMovie === "top_rated" ? "secondary" : ""} onClick={() => getMovieList("top_rated",1)}>Top Rated</Button>
-                <Button className="btn" variant={typeOfMovie === "popular" ? "secondary" : ""} onClick={() => getMovieList("popular",1)}>Popular</Button>
-                <Button className="btn" variant={typeOfMovie === "upcoming" ? "secondary" : ""} onClick={() => getMovieList("upcoming",1)}>Upcoming</Button> 
+                <Button variant={typeOfMovie === "now_playing" ? "secondary" : ""} onClick={() => getMovieList("now_playing",1)}>Now Playing</Button> 
+                <Button variant={typeOfMovie === "top_rated" ? "secondary" : ""} onClick={() => getMovieList("top_rated",1)}>Top Rated</Button>
+                <Button variant={typeOfMovie === "popular" ? "secondary" : ""} onClick={() => getMovieList("popular",1)}>Popular</Button>
+                <Button variant={typeOfMovie === "upcoming" ? "secondary" : ""} onClick={() => getMovieList("upcoming",1)}>Upcoming</Button> 
               </div>
               
               <div className="right">
-                {pageNum -1 > 0 && (<Button className="btn" onClick={() => getMovieList(typeOfMovie,pageNum-1)}>Previous</Button>) }
-                {pageNum -2 > 0 && (<Button className="btn" onClick={() => getMovieList(typeOfMovie,pageNum-2)}>{pageNum-2}</Button>)}
-                {pageNum -1 > 0 && (<Button className="btn" onClick={() => getMovieList(typeOfMovie,pageNum-1)}>{pageNum-1}</Button>)}
-                <Button className="btn" variant="secondary" onClick={() => getMovieList(typeOfMovie,pageNum)}>{pageNum}</Button>
-                {pageNum + 1 < totalPage+1 && (<Button className="btn" onClick={() => getMovieList(typeOfMovie,pageNum+1)}>{pageNum+1}</Button>)}
-                {pageNum + 2 < totalPage+1 && (<Button className="btn" onClick={() => getMovieList(typeOfMovie,pageNum+2)}>{pageNum+2}</Button>)}
-                {pageNum + 1 < totalPage+1 && (<Button className="btn" onClick={() => getMovieList(typeOfMovie,pageNum+1)}>Next</Button>)}
+                {pageNum -1 > 0 && (<Button onClick={() => getMovieList(typeOfMovie,pageNum-1)}>Previous</Button>) }
+                {pageNum -2 > 0 && (<Button onClick={() => getMovieList(typeOfMovie,pageNum-2)}>{pageNum-2}</Button>)}
+                {pageNum -1 > 0 && (<Button onClick={() => getMovieList(typeOfMovie,pageNum-1)}>{pageNum-1}</Button>)}
+                <Button variant="secondary" onClick={() => getMovieList(typeOfMovie,pageNum)}>{pageNum}</Button>
+                {pageNum + 1 < totalPage+1 && (<Button onClick={() => getMovieList(typeOfMovie,pageNum+1)}>{pageNum+1}</Button>)}
+                {pageNum + 2 < totalPage+1 && (<Button onClick={() => getMovieList(typeOfMovie,pageNum+2)}>{pageNum+2}</Button>)}
+                {pageNum + 1 < totalPage+1 && (<Button onClick={() => getMovieList(typeOfMovie,pageNum+1)}>Next</Button>)}
               </div>
             </div>
             <hr/>
