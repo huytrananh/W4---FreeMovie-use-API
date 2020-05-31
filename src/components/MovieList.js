@@ -1,18 +1,20 @@
 import React from 'react'
 import MovieCard from './MovieCard'
+import {Spinner} from 'react-bootstrap'
 
 
 export default function MovieList(props) {
     if(props.movieList === null){
-        return(<div>Loading</div>)
+        return(<div><Spinner animation="border" /></div>)
     }
+    if(props.isFetching){
+        return (<div><Spinner animation="border" /></div>)
+      }
     return (
         <div className="movie-list">
-            {props.movieList.map(item => {
+            {props.movieList.map((item) => {
                 return(
-                    <>
-                        <MovieCard movie = {item} genresFromMovieList = {props.genresFromApp}/>
-                    </>
+                    <MovieCard key={item.id} movie={item} genresFromMovieList={props.genresFromApp}/>
                 )
             })}
         </div>

@@ -1,6 +1,7 @@
 import React from 'react'
+import {Carousel} from 'react-bootstrap' 
 
-export default function Carousel() {
+export default function CarouselSlide(props) {
     return (
         <div>
             <Carousel>

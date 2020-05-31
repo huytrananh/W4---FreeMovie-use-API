@@ -90,7 +90,7 @@
 }
 
 .btn-search{
-  color: #495057 !important;
+  color: #99a2aa !important;
   border: 1px solid #ced4da !important ;
 }
 .btn-search:hover{
@@ -160,6 +160,8 @@
   transition: all ease 500ms;
 
 }
+
+
 /* ------------------- END Switch Movie Section ------------------- */
 
 
