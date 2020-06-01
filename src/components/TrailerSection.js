@@ -13,12 +13,12 @@ export default function TrailerSection() {
                 </div>
                 <div class="card-deck">
                     <div class="card">
-                    <iframe width="100%" height="200"
-                        src="https://www.youtube.com/embed/yGY484EPe5U">
-                    </iframe>
-                    <div class="card-footer">
-                        <small class="text-muted">Wonder woman 2</small>
-                    </div>
+                        <iframe width="100%" height="200"
+                            src="https://www.youtube.com/embed/yGY484EPe5U">
+                        </iframe>
+                        <div class="card-footer">
+                            <small class="text-muted">Wonder woman 2</small>
+                        </div>
                     </div>
                     <div class="card">
                     <iframe width="100%" height="200"

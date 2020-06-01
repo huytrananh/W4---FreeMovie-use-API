@@ -1,5 +1,7 @@
 import React from 'react'
 import {Card, ListGroupItem, ListGroup, CardDeck, Badge} from 'react-bootstrap'
+import { CardLink } from 'react-bootstrap/Card'
+
 
 export default function MovieCard({movie, genresFromMovieList}) {
     // let movie = props.movie
@@ -10,6 +12,7 @@ export default function MovieCard({movie, genresFromMovieList}) {
     //3. if value 1 === value 2.id
     //4. return value 2.name
     //3.1 else if its no same, just ignore 
+
 
     return (
         <CardDeck className="movie-list-card">
@@ -22,8 +25,9 @@ export default function MovieCard({movie, genresFromMovieList}) {
                     <Card.Text>{movie.overview}</Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                    <ListGroupItem><b>Rating:</b> {movie.vote_average} star</ListGroupItem>         
-                </ListGroup>                
+                    <ListGroupItem><b>Rating:</b> {movie.vote_average} star</ListGroupItem>   
+                    <ListGroupItem><a href="#">Watch</a></ListGroupItem>            
+                </ListGroup>             
             </Card>
         </CardDeck> 
     )

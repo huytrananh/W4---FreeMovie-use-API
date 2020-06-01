@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import MovieList from './components/MovieList'
 import CarouselSlide from './components/CarouselSlide'
 import TrailerSection from './components/TrailerSection'
+import ReactModal from 'react-modal'
 
 
 // 2. define API KEY
@@ -22,6 +23,7 @@ function App() {
   const [pageNum, setPageNum] = useState(1)
   const [isFetching, setIsFetching] = useState()
   const [totalPage, setTotalPage] = useState(1)
+  const [modalOpen, setModalOpen] = useState(false)
 
   // 1. get API Now Playing from themoviedb
   const getMovieList = async(listName, num) => {
@@ -74,6 +76,16 @@ function App() {
     
   }
   
+
+  const closeModal = () => {
+    //change isOpen to false
+    setModalOpen(false)
+  }
+
+  const openModal = () => {
+    setModalOpen(true)
+  }
+
   // useEffect(function you wanna fire , when you call the useEffect again )
   useEffect(() => {
     getGenreList()
@@ -119,7 +131,10 @@ function App() {
             </div>
             <hr/>
             <div>
-              <MovieList movieList = {movieList} genresFromApp={genreList} isFetching={isFetching}/>
+              <MovieList movieList = {movieList} genresFromApp={genreList} isFetching={isFetching} />
+              <ReactModal isOpen={modalOpen}>
+                <button onClick={() => closeModal()}>Close</button>
+              </ReactModal>
             </div>
         </div>    
         <TrailerSection/>
