@@ -14,7 +14,7 @@ export default function MovieList(props) {
         <div className="movie-list">
             {props.movieList.map((item) => {
                 return(
-                    <MovieCard key={item.id} movie={item} genresFromMovieList={props.genresFromApp}/>
+                    <MovieCard key={item.id} openModalFromMovieList={props.openModal} movie={item} genresFromMovieList={props.genresFromApp} getVideos={props.getVideos}/>
                 )
             })}
         </div>

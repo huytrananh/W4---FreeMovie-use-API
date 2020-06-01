@@ -4,7 +4,7 @@ import {Carousel} from 'react-bootstrap'
 export default function CarouselSlide(props) {
     return (
         <div>
-            <Carousel>
+            <Carousel className="carousel-banner">
                 <Carousel.Item>
                 <img
                     className="d-block w-100"
